@@ -10,13 +10,6 @@ const ITEM_TYPES = {
 
 const STORAGE_KEY = 'academic_calendar_items';
 
-const initialItems = [
-  { id: 1, title: 'Tarea de Matemáticas', type: 'activity', deadline: '2025-11-20', description: 'Resolver ejercicios del capítulo 5', completed: false },
-  { id: 2, title: 'Examen de Historia', type: 'evaluation', deadline: '2025-11-22', description: 'Examen sobre la Segunda Guerra Mundial', completed: false },
-  { id: 3, title: 'Quiz de Química', type: 'questionnaire', deadline: '2025-11-18', description: 'Cuestionario sobre enlaces químicos', completed: true },
-  { id: 4, title: 'Debate: Cambio Climático', type: 'forum', deadline: '2025-11-25', description: 'Participación en foro sobre sostenibilidad', completed: false }
-];
-
 export default function AcademicCalendar() {
   const [items, setItems] = useState(() => {
     try {
