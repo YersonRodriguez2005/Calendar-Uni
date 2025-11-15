@@ -16,12 +16,11 @@ export default function AcademicCalendar() {
       const stored = window.localStorage.getItem(STORAGE_KEY);
       if (stored) {
         const parsed = JSON.parse(stored);
-        return parsed.length > 0 ? parsed : initialItems;
+        return parsed.length > 0 ? parsed : [];
       }
-      return initialItems;
     } catch (error) {
       console.error('Error loading from localStorage:', error);
-      return initialItems;
+      return [];
     }
   });
 
